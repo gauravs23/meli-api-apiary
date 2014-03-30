@@ -233,3 +233,105 @@ The List Of Assets has following attribute:
 
     [Assets List][]
 
+# Group Gauge Widgets
+Gauge related resources of the **Data Centers API**
+
+The guage resource has the following attributes:
+
+- type
+- dataCenterId
+- agreementId
+- value
+- uom
+- change
+- threshold
+- timestamp
+- trend
+
+The trend resource has the following attributes:
+- unit
+- list of label-value pairs
+
+## Guage [/guage/{id}]
+A single guage object.
+
++ Parameters
+    + id (string) ... ID of the guage to perform various operations.
+    
++ Model (application/json)
+    JSON representation of guage resource.
+    
+    + Body
+    
+            {
+                "type" : "a03F000000A2lm3",
+                "dataCenterId" : "first asset",
+                "agreementId" : "a04F000000W9lKs",
+                "value" : "a01F000000Fw9Sf",
+                "uom" : "001F0000012rPxV",
+                "change" : "Server",
+                "threshold" : "Alles",
+                "timestamp" : "a340l",
+                "trend" : [
+                        {
+                            "unit" : "ADDlKK330",
+                            "lv-pairs" : [{“M”:1}, {“T”:4}]
+                        },
+                        {
+                            "unit" : "ADDlKK330",
+                            "lv-pairs" : [{“M”:1}, {“T”:4}]
+                        }
+                ]
+            }
+
+### Get a Single Guage [GET]
++ Response 200 (application/json)
+
+    [Guage][]
+
+## Guages List [/guages{?type,datacenterId}]
+Collection of Guages. The API receives parameters like type, datacenterId which can be used to filter out results based on respective parameters.
+
+The List Of Guages has following attribute:
+
+- guages
+
++ Model (application/json)
+
+    + Body
+    
+            {
+                "guages" : 
+                        [
+                            {
+                                "type" : "a03F000000A2lm3",
+                                "dataCenterId" : "first asset",
+                                "agreementId" : "a04F000000W9lKs",
+                                "value" : "a01F000000Fw9Sf",
+                                "uom" : "001F0000012rPxV",
+                                "change" : "Server",
+                                "threshold" : "Alles",
+                                "timestamp" : "a340l",
+                                "trend" : [
+                                        {
+                                            "unit" : "ADDlKK330",
+                                            "lv-pairs" : [{“M”:1}, {“T”:4}]
+                                        },
+                                        {
+                                            "unit" : "ADDlKK330",
+                                            "lv-pairs" : [{“M”:1}, {“T”:4}]
+                                        }
+                                ]
+                            }
+                         ]
+            }
+
+### List all Guages [GET]
++ Parameters
+    + type (optional, string) ... Filter widget data by type. E.g. "e"
+    + datacenterId (optional, string) ... Filter guage by Data Center Id. E.g. 001F0000012rPxV
+
++ Response 200 (application/json)
+
+    [Guages List][]
+

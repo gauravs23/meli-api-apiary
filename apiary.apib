@@ -1,13 +1,32 @@
 FORMAT: 1A
-HOST: http://www.google.com
 
 # Meli Data Centers API
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+The datacenter REST API will be used to expose details for a data center management application.
 
-# Group Notes
-Notes related resources of the **Notes API**
+# Group Observation
+Observation related resources of the **Data Centers API**
 
-## Notes Collection [/notes]
+## Observation [/observation/{id}]
+A single observation object.
+
+The observation resource has the following attributes:
+- id
+- status
+- recordType
+- type
+- conditions
+- name
+- title
+- description
+- referenceUrl
+- assetId
+- spaceId
+- reasonForIgnore
+- value
+- valueType
+- rejectionReason
+- rejectionComment
+
 ### List all Notes [GET]
 + Response 200 (application/json)
 

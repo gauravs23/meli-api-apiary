@@ -150,9 +150,35 @@ The asset resource has the following attributes:
 - id
 - name
 - assetRegisterId
+- agreementId
+- dataCenterId
+- type
+- make
+- model
+- location
+
 
 
 + Parameters
     + id (string) ... ID of the asset to perform various operations.
-
-
+    
++ Model (application/json)
+    JSON representation of asset resource.
+    
+    + Body
+    
+            {
+                "id" : "a03F000000A2lm3",
+                "name" : "first asset",
+                "assetRegisterId" : "a04F000000W9lKs",
+                "agreementId" : "a01F000000Fw9Sf",
+                "dataCenterId" : "001F0000012rPxV",
+                "type" : "Server",
+                "make" : "Alles",
+                "model" : "a340l",
+                "serialNumber" : "ADDlKK330"
+                "location" : "NY",
+                "description" : "First asset in API",
+                "dateCommissioned" : "29-03-2014 23:44:55",
+                "dataCenterImage" : "http://www.testimages.api.com/home.jpg" 
+            }

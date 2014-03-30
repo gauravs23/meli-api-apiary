@@ -72,8 +72,30 @@ The observation resource has the following attributes:
     [Observation][]
 
 
-## List of Observations [/observations{?type,assetId,spaceId}]
+## Observations List [/observations{?type,assetId,spaceId}]
 Collection of observations. The API receives parameters like type, assetId and spaceId which can be used to filter out results based on respective parameters.
+
+The List Of Observations has following attribute:
+
+- observations
+
++ Model (application/json)
+
+    + Body
+    
+            {
+                "observations" : [
+                            [Observation][],
+                            [Observation][]
+                         ]
+            }
+
+### List of Observations [GET]
++ Parameters
+    + type (optional, string) ... Filter observations by type. E.g. alert
+    + assetId (optional, string) ... Filter notifications by Asset Id. E.g. a03F000000A2lm3
+    + spaceId (optional, string) ... Filter notifications by Space Id. E.g. a05F000000AS2KJ
+
 
 
 

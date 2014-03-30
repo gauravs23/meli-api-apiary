@@ -80,7 +80,6 @@ The List Of Observations has following attribute:
 - observations
 
 + Model (application/json)
-
     + Body
     
             {
@@ -89,4 +88,17 @@ The List Of Observations has following attribute:
                             [Observation][]
                          ]
             }
+
+### List all observations [GET]
++ Parameters
+    + type (optional, string) ... Filter observations by type. E.g. alert.
+    + assetId (optional, string) ... Filter notifications by Asset Id. E.g. a03F000000A2lm3.
+    + spaceId (optional, string) ... Filter notifications by Space Id. E.g. a05F000000AS2KJ.
+
++ Response 200 (application/json)
+
+    [Observations List][]
+
+
+
 

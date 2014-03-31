@@ -6,6 +6,8 @@ The datacenter REST API will be used to expose details for a data center managem
 # Group Observation
 Observation related resources of the **Data Centers API**
 
+All the response in the API will have the **req-status** field which will indicate the request success or failure.
+
 ## Observation [/observation/{id}]
 A single observation object.
 
@@ -37,6 +39,7 @@ The observation resource has the following attributes:
     + Body
     
             {
+                "req-status" : true,
                 "id": "a02F0000009GoV5",
                 "status": "New",
                 "recordType": "Alert",

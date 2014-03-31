@@ -59,6 +59,14 @@ The observation resource has the following attributes:
 + Response 200 (application/json)
 
     [Observation][]
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "error" : "resource not found"
+            }
     
 ### Update an Observation [PATCH]
 + Request (application/json)

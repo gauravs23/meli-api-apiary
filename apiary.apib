@@ -201,6 +201,46 @@ The List Of Observations has following attribute:
 
     [Observations List][]
 
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
+
 # Group General
 General API meta data requests of the **Data Centers API**
 
@@ -223,6 +263,46 @@ This will be used to ping the server to see if any subsequent requests should be
 + Response 200 (application/json)
     
     [Ping][]
+
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
 
 # Group Assets
 Assets related resources of the **Data Centers API**
@@ -275,6 +355,46 @@ A single asset object.
 
     [Asset][]
 
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
+
 ## Assets List [/assets{?customerId,datacenterId,spaceId,agreementId}]
 Collection of Assets. The API receives parameters like customerId, datacenterId, spaceId, agreementId which can be used to filter out results based on respective parameters.
 
@@ -317,6 +437,46 @@ The List Of Assets has following attribute:
 + Response 200 (application/json)
 
     [Assets List][]
+    
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
 
 # Group Gauge Widgets
 Gauge related resources of the **Data Centers API**
@@ -373,6 +533,46 @@ A single guage object.
 + Response 200 (application/json)
 
     [Guage][]
+    
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
 
 ## Guages List [/guages{?type,datacenterId}]
 Collection of Guages. The API receives parameters like type, datacenterId which can be used to filter out results based on respective parameters.
@@ -421,12 +621,44 @@ The List Of Guages has following attribute:
     [Guages List][]
 
 + Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
     
     + Body
         
             {
-                "status" : "error"
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
             }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
 
 # Group Data Centers
 Data Center related resources of the **Data Centers API**
@@ -434,7 +666,7 @@ Data Center related resources of the **Data Centers API**
 The date center resource has the following attributes:
 
 - id
-- name
+- name  
 
 ## Data Center [/data-center/{id}]
 A single data center object.
@@ -483,6 +715,46 @@ The List Of Data Centers has following attribute:
 + Response 200 (application/json)
 
     [Data Centers List][]
+
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
     
 ## Data Centers List With Assets [/data-centers-assets{?onlyIds,singleAsset}]
 Collection of Data Centers with Child Assets.

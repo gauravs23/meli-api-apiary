@@ -792,10 +792,54 @@ Collection of Data Centers with Child Assets.
                     ]
             }
 
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
+
+
 ## Data Centers List With Child Assets IDs [/data-centers-assets{?onlyIds}]
 Collection of Data Centers with Child Assets Ids only in the response.
 
 ### List all Data Centers With Child Assets Only IDs [GET]
+
++ Parameters
+    + onlyIds (optional, boolean) ... Boolean flag to determine whether the response should contain Only IDs of the child assets. Values could be true/false
 
 + Response 200 (application/json)
     
@@ -819,10 +863,54 @@ Collection of Data Centers with Child Assets Ids only in the response.
                     ]
             }
 
-## Data Centers List With Single Child Asset Data Center [/data-centers-assets{?singleDetailed}]
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
+
+
+## Data Centers List With Single Child Asset Data Center [/data-centers-assets{?singleDetailedDC}]
 Collection of Data Centers with only first Data Center having the detailed child assets values.
 
 ### List all Data Centers with One Data Center having child assets details [GET]
+
++ Parameters
+    + singleDetailedDC (optional, boolean) ... Boolean flag to determine whether there should be a single detailed data center with the list of remaining data centers in the response. This kind of response reduces the payload size.
 
 + Response 200 (application/json)
     
@@ -862,6 +950,47 @@ Collection of Data Centers with only first Data Center having the detailed child
                      }
                     ]
             }
+
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
+
 
 # Group Weather
 Weather related resources of the **Data Centers API**

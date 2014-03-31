@@ -756,7 +756,7 @@ The List Of Data Centers has following attribute:
                 "errorMessage" : "Application is unavailable at the moment. Please contact admin."
             }  
     
-## Data Centers List With Assets [/data-centers-child-assets{?onlyIds,singleAsset}]
+## Data Centers List With Assets [/data-centers-assets]
 Collection of Data Centers with Child Assets.
 
 ### List all Data Centers With Child Assets [GET]
@@ -767,10 +767,30 @@ Collection of Data Centers with Child Assets.
     
             {
                 "data-centers-list" : 
-                    {
+                    [
+                     {
+                        "id" : "001F0000012rPxV",
+                        "name" : "Primary DC",
+                        "assets" : [
+                            {
+                                "id" : "a03F000000A2lm3",
+                                "name" : "first asset",
+                                "assetRegisterId" : "a04F000000W9lKs",
+                                "agreementId" : "a01F000000Fw9Sf",
+                                "dataCenterId" : "001F0000012rPxV",
+                                "type" : "Server",
+                                "make" : "Alles",
+                                "model" : "a340l",
+                                "serialNumber" : "ADDlKK330"
+                                "location" : "NY",
+                                "description" : "First asset in API",
+                                "dateCommissioned" : "29-03-2014 23:44:55",
+                                "dataCenterImage" : "http://www.testimages.api.com/home.jpg" 
+                            }
+                        ]
+                     }   
                         
-                        
-                    }
+                    ]
             }
 
 # Group Weather

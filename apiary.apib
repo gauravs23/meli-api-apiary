@@ -756,7 +756,7 @@ The List Of Data Centers has following attribute:
                 "errorMessage" : "Application is unavailable at the moment. Please contact admin."
             }  
     
-## Data Centers List With Assets [/data-centers-assets]
+## Data Centers List With Child Assets [/data-centers-assets]
 Collection of Data Centers with Child Assets.
 
 ### List all Data Centers With Child Assets [GET]
@@ -789,6 +789,77 @@ Collection of Data Centers with Child Assets.
                             }
                         ]
                      }   
+                    ]
+            }
+
+## Data Centers List With Child Assets IDs [/data-centers-assets{?onlyIds}]
+Collection of Data Centers with Child Assets Ids only in the response.
+
+### List all Data Centers With Child Assets Only IDs [GET]
+
++ Response 200 (application/json)
+    
+    + Body 
+    
+            {
+                "data-centers-list" : 
+                    [
+                     {
+                        "id" : "001F0000012rPxV",
+                        "name" : "Primary DC",
+                        "assets" : [
+                            {
+                                "id" : "a03F000000A2lm3",
+                            },
+                            {
+                                "id" : "c03T222000A2lm3",
+                            }
+                        ]
+                     }   
+                    ]
+            }
+
+## Data Centers List With Single Child Asset Data Center [/data-centers-assets{?singleDetailed}]
+Collection of Data Centers with only first Data Center having the detailed child assets values.
+
+### List all Data Centers with One Data Center having child assets details [GET]
+
++ Response 200 (application/json)
+    
+    + Body 
+    
+            {   
+                "data-center" : {
+                    "id" : "001F0000012rPxV",
+                    "name" : "Primary DC",
+                    "assets" : [
+                        {
+                            "id" : "a03F000000A2lm3",
+                            "name" : "first asset",
+                            "assetRegisterId" : "a04F000000W9lKs",
+                            "agreementId" : "a01F000000Fw9Sf",
+                            "dataCenterId" : "001F0000012rPxV",
+                            "type" : "Server",
+                            "make" : "Alles",
+                            "model" : "a340l",
+                            "serialNumber" : "ADDlKK330"
+                            "location" : "NY",
+                            "description" : "First asset in API",
+                            "dateCommissioned" : "29-03-2014 23:44:55",
+                            "dataCenterImage" : "http://www.testimages.api.com/home.jpg" 
+                        }
+                    ]
+                },
+                "data-centers-list" : 
+                    [
+                     {
+                        "id" : "001F0000012rPxV",
+                        "name" : "Primary DC",
+                     },
+                     {
+                        "id" : "00GGT800012rPxV",
+                        "name" : "Secondary DC",
+                     }
                     ]
             }
 

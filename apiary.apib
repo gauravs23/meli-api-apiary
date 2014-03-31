@@ -8,6 +8,8 @@ Observation related resources of the **Data Centers API**
 
 All the response in the API will have the **req-status** field which will indicate the request success or failure.
 
+All the error responses like 400 status code, 503 status code will have an error object that will provide the error code and error message.
+
 ## Observation [/observation/{id}]
 A single observation object.
 
@@ -63,13 +65,35 @@ The observation resource has the following attributes:
 
     [Observation][]
 
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
 + Response 404 (application/json)
     
     + Body
         
             {
-                "error" : "resource not found"
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
             }
+
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
     
 ### Update an Observation [PATCH]
 + Request (application/json)

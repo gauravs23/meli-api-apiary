@@ -430,20 +430,27 @@ The List Of Data Centers has following attribute:
 Weather related resources of the **Data Centers API**
 
 
-## Weather [/weather{?q, extra, num_of_days, date, fx, cc, includeLocation, show_comments, callback, key}]
-A single data center object.
+## Weather [/weather{?q, extra, num_of_days, date, fx, cc, includeLocation, show_comments, callback}]
+A single weather object.
 
 + Parameters
-    + id (string) ... ID of the data center to perform various operations.
-    
+    + q (string) ... Location that can be represented as text, IP Address, Latitude longitude or UK/US/Canada zipcodes. E.g. New+York, New+york,ny, 101.25.32.325, 48.834,2.394
+    + extra (optional, string) ... Include extra information. If the extra parameter is set to localObsTime, then the response will include the current weather observation time in UTC as well as local time of the location requested.
+    + num_of_days (string) ... Number of days of forecast. Example: num_of_days=2
+    + date (optional, string) ... Specifies weather for a date. E.g. : Valid values: today, tomorrow, yyyy-MM-dd (Example: 2013-04-20 for 20 April 2013)
+    + fx (optional, string) ... Whether to return weather forecast output. Valid values: yes (default), no
+    + cc (optional, string) ... Whether to return current weather conditions output. Valid values: yes (default), no
+    + includeLocation (optional, string) ... Whether to return the nearest weather point for which the weather data is returned for a given postcode, zipcode and lat/lon values. Valid values: yes, no (default)
+    + show_comments (optional, string) ... Whether output contains CSV/TAB comments. Valid values: yes (default), no
+    + callback (optional, string) ... The function name for JSON callback.
+
 + Model (application/json)
     JSON representation of data center resource.
     
     + Body
     
             {
-                "id" : "a03F000000A2lm3",
-                "name" : "Primary DC"
+                "weather-data"
             }
 
 

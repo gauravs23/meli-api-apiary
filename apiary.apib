@@ -116,6 +116,46 @@ The observation resource has the following attributes:
 
     [Observation][]
 
++ Response 400 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_1",
+                "errorMessage" : "Perhaps the input parameters are not valid."
+            }
+
++ Response 404 (application/json)
+    
+    + Body
+        
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_2",
+                "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
+            }
+
++ Response 500 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_3",
+                "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
+            }  
+
 
 ## Observations List [/observations{?type,assetId,spaceId}]
 Collection of observations. The API receives parameters like type, assetId and spaceId which can be used to filter out results based on respective parameters.

@@ -342,3 +342,33 @@ The List Of Guages has following attribute:
             {
                 "status" : "error"
             }
+
+# Group Data Centers
+Data Center related resources of the **Data Centers API**
+
+The date center resource has the following attributes:
+
+- id
+- name
+
+## Data Center [/data-center/{id}]
+A single data center object.
+
++ Parameters
+    + id (string) ... ID of the data center to perform various operations.
+    
++ Model (application/json)
+    JSON representation of data center resource.
+    
+    + Body
+    
+            {
+                "id" : "a03F000000A2lm3",
+                "name" : "Primary DC"
+            }
+
+### Get a Single Data Center [GET]
++ Response 200 (application/json)
+
+    [Data Center][]
+

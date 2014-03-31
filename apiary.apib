@@ -85,7 +85,7 @@ The observation resource has the following attributes:
                 "errorMessage" : "Perhaps the resource you are looking for doesnt exist."
             }
 
-+ Response 503 (application/json)
++ Response 500 (application/json)
 
     + Body
     
@@ -93,6 +93,16 @@ The observation resource has the following attributes:
                 "reqStatus" : false,
                 "errorCode" : "MDC_ERROR_3",
                 "errorMessage" : "Fatal Application Error has occured. Please contact admin."
+            }  
+            
++ Response 503 (application/json)
+
+    + Body
+    
+            {
+                "reqStatus" : false,
+                "errorCode" : "MDC_ERROR_4",
+                "errorMessage" : "Application is unavailable at the moment. Please contact admin."
             }  
     
 ### Update an Observation [PATCH]
